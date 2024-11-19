@@ -1,0 +1,23 @@
+class Solution {
+  public:
+
+    // Function to rotate an array by d elements in counter-clockwise direction.
+    void rotateArr(vector<int>& arr, int d) {
+        // code here
+   int n = arr.size();  
+    d = d % n;  // Handle cases where d is greater than the array size  
+
+    // Reverse the entire array  
+    std::reverse(arr.begin(), arr.end());  
+
+    // Reverse the first d elements  
+    std::reverse(arr.begin(), arr.begin() +n-d);  
+
+    // Reverse the remaining n-d elements  
+    std::reverse(arr.begin() +n- d, arr.end());  
+
+ 
+
+      
+    }
+};
