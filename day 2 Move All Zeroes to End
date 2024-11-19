@@ -1,0 +1,24 @@
+// User function template for C++
+class Solution {
+  public:
+    void pushZerosToEnd(vector<int>& arr) {
+        // code here
+        
+        vector<int> v(arr.size(),0);
+        int index = 0;
+        for(int i = 0 ; i < arr.size() ; i++)
+        {
+            if(arr[i]!=0)
+            {
+                v[index]=arr[i];
+                index++;
+            }
+            
+        }
+        
+        for(int i = 0 ; i < arr.size();i++)
+        {
+            arr[i]=v[i];
+        }
+    }
+};
