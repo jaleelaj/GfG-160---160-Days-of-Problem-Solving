@@ -1,0 +1,18 @@
+class Solution {
+  public:
+    int maximumProfit(vector<int> &arr) {
+        // code here
+        if(arr.size()<=1) return 0;
+        int min = arr[0];
+        int maxi = INT_MIN;
+        
+        for(int i = 1 ; i < arr.size() ; i++)
+        {
+            if(arr[i]<min)
+            min = arr[i];
+            int cost = arr[i]- min ;
+            maxi = max(maxi,cost);
+        }
+        return maxi;
+    }
+};
